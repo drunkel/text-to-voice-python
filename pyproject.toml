@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "text-to-voice"
+version = "0.1.0"
+description = "Convert text files to speech audio using macOS voices"
+authors = ["Dylan Runkel <dylan.runkel@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "text_to_voice"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+pydub = "^0.25.1"
+tqdm = "^4.67.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+isort = "^5.12.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+text-to-voice = "text_to_voice.run:main"
